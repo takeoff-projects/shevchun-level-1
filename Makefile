@@ -15,5 +15,5 @@ init:
 deploy:
 	terraform -chdir="./terraform" apply --auto-approve -var="project_id=roi-takeoff-user51"
 
-destory:
+destroy:
 	terraform -chdir="./terraform" destroy --auto-approve -var="project_id=roi-takeoff-user51"
