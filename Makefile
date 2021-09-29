@@ -9,6 +9,9 @@ docker-build:
 gcloud-build: 
 	gcloud builds submit --tag=gcr.io/roi-takeoff-user51/go-website:v1.8 .
 
+init:
+	terraform -chdir="./terraform" init
+
 deploy:
 	terraform -chdir="./terraform" apply --auto-approve -var="project_id=roi-takeoff-user51"
 
